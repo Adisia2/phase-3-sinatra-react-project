@@ -8,7 +8,13 @@ class ApplicationController < Sinatra::Base
   end
 
   post '/services' do
-    service = Service.create(params)
+    service = Service.create(
+      name: params[:name],
+      description: params[:description],
+      price: params[:price],
+      image: params[:image]
+      
+    )
     service.to_json
   end
 
@@ -18,7 +24,7 @@ class ApplicationController < Sinatra::Base
       phone: params[:phone],
       email: params[:email],
       service: params[:service],
-      date: params[:date],
+      date: params[:date_time],
       customer_id: params[:customer_id],
       service_id: params[:service_id]
     )
