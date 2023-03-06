@@ -3,7 +3,12 @@ class ApplicationController < Sinatra::Base
 
   # CREATE
   post '/customers' do
-    customer = Customer.create(params)
+    customer = Customer.create(
+      name: params[:name],
+      email: params[:email],
+      phone: params[:phone]
+    
+    )
     customer.to_json
   end
 
