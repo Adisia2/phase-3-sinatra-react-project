@@ -12,14 +12,18 @@
 
 ActiveRecord::Schema.define(version: 2023_03_05_054023) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+  enable_extension "timescaledb"
+
   create_table "appointments", force: :cascade do |t|
     t.string "name"
     t.string "phone"
     t.string "email"
     t.string "service"
     t.string "date"
-    t.integer "customer_id"
-    t.integer "service_id"
+    t.bigint "customer_id"
+    t.bigint "service_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["customer_id"], name: "index_appointments_on_customer_id"

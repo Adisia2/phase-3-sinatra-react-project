@@ -9,8 +9,8 @@ service1 = Service.create(name: "Haircut", description: "Includes shampoo and bl
 service2 = Service.create(name: "Color", description: "Includes single-process color", price: 100.00, image: "https://i1.wp.com/therighthairstyles.com/wp-content/uploads/2013/12/1-black-high-top-fade.jpg?resize=500%2C529&ssl=1")
 
 # Create sample appointments
-appointment1 = Appointment.create(name: "John Doe", email: "johndoe@example.com", phone: "555-1234", service: "Haircut", date: DateTime.new(2023, 3, 15, 10, 0, 0), customer: customer1, service: service1)
-appointment2 = Appointment.create(name: "Jane Smith", email: "janesmith@example.com", phone: "555-5678", service: "Color", date: DateTime.new(2023, 3, 16, 14, 0, 0), customer: customer2, service: service2)
+appointment1 = Appointment.create(name: "John Doe", email: "johndoe@example.com", phone: "555-1234",  date: DateTime.new(2023, 3, 15, 10, 0, 0), customer: customer1, service: service1)
+appointment2 = Appointment.create(name: "Jane Smith", email: "janesmith@example.com", phone: "555-5678",  date: DateTime.new(2023, 3, 16, 14, 0, 0), customer: customer2, service: service2)
 
 puts "✅ Done seeding!"
 
